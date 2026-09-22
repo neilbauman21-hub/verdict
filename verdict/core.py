@@ -76,8 +76,10 @@ class Verdict:
             from transformers import AutoModelForCausalLM, AutoTokenizer
 
             self.tok = AutoTokenizer.from_pretrained(self.model_id)
+            # transformers>=5 renamed torch_dtype -> dtype; torch_dtype warns and
+            # then segfaults during weight loading on some builds. Use dtype.
             self.model = AutoModelForCausalLM.from_pretrained(
-                self.model_id, torch_dtype=torch.float16, device_map="auto"
+                self.model_id, dtype=torch.float32
             )
         self.load_ms = (time.time() - t0) * 1000
 

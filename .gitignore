@@ -1,7 +1,7 @@
+dist/
+build/
+*.egg-info/
+.verdict.egg-info/
 __pycache__/
 *.pyc
 .venv/
-*.egg-info/
-build/
-dist/
-dist/
