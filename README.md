@@ -90,7 +90,9 @@ There is **no universal confidence signal.** There is a universal *procedure* fo
 ## Honest limits
 
 - **24 cases in the published run.** The risk-coverage curve holds and replicates on the in-domain subset (0.733 → 0.917), but the thresholds need refitting on real traffic before production use.
+- **The train/test split does not generalise yet — the most important caveat here.** Fitting on 14 cases and evaluating on 10 held-out, the abstention gain disappears (0.500 → 0.500). Diagnosis: the held-out split is simply harder than the training split — 2/14 wrong in train versus 5/10 held-out, and 3 of those errors carry confidence ≥ 0.5. The fit did not fail; it was fit on a non-representative sample. On real traffic this is fixed by fitting on a random sample of the same distribution you serve, and on more than 14 cases. **Until that is done on your traffic, treat the abstention thresholds as unvalidated.**
 - **9B inference is ~2.4 s/question on Apple Silicon CPU.** On a served model this is one prefill — the whole point is it replaces a full generation — but it is not instant locally.
+- **The confidence signal must be selected per base model** (`fit()` does this from labelled data). There is no universal signal.
 - **"other" is the main error source.** The model wants to route everything to a real department rather than admit it doesn't fit. The abstention layer is what catches this.
 - **Not a replacement for a frontier model on hard reasoning.** It is a fast, honest gate in front of one.
 

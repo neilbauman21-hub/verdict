@@ -84,7 +84,7 @@ def run(state, questions_json, model_id, threshold):
 
 
 def build():
-    with gr.Blocks(title="Verdict — typed decisions with abstention", theme=gr.themes.Soft()) as demo:
+    with gr.Blocks(title="Verdict — typed decisions with abstention") as demo:
         gr.Markdown(
             "# Verdict — typed decisions with abstention\n"
             "One forward pass over any causal LM. **No generation, no new weights.**\n"
@@ -105,4 +105,4 @@ def build():
 
 
 if __name__ == "__main__":
-    build().launch()
+    build().launch(theme=gr.themes.Soft())
