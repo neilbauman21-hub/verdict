@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "verdict-ai"
+name = "verdict-llm"
 version = "0.1.0"
 description = "Typed decisions with abstention, over any causal LM. One forward pass, no generation, no new weights."
 readme = "README.md"

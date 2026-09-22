@@ -49,7 +49,7 @@ confidently and wrong. In production that is the difference between a router
 that guesses and one that escalates.
 
 ```
-pip install verdict-ai
+pip install verdict-llm
 ```
 
 ```python

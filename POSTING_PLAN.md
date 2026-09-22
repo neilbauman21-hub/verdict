@@ -95,7 +95,7 @@ the TECHNICAL.md content with the bug-fixes section expanded.
 ## 5. Sequence (order matters)
 
 1. **GitHub README + TECHNICAL.md live** (done)
-2. **PyPI** `pip install verdict-ai` — blocked on a valid account-scoped token.
+2. **PyPI** `pip install verdict-llm` — blocked on a valid account-scoped token.
    Laya's single biggest differentiator was being the only `pip install` in the
    wave. Do not post anywhere until this resolves, or the README's install
    command is broken
@@ -113,7 +113,7 @@ the TECHNICAL.md content with the bug-fixes section expanded.
 - **Don't post to all subreddits simultaneously** — spam-filter risk, and it
   reads as promotion
 - **Don't post before PyPI resolves** — the README says `pip install
-  verdict-ai` and a broken install command kills the launch
+  verdict-llm` and a broken install command kills the launch
 - **Don't soften the honest-limits section for the post** — the failed
   train/test split is the most credible thing in it. Laya got 9,959 stars with
   an "Honest limits" section; the wave rewards it

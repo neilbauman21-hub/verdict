@@ -5,7 +5,7 @@
 Give it a **state** (text, email, ticket, or JSON) and **typed questions**; it returns typed answers with calibrated probabilities in **one forward pass** — no text generation, nothing to parse, nothing to hallucinate. And when it isn't sure, it says so.
 
 ```bash
-pip install verdict-ai
+pip install verdict-llm
 ```
 
 ```python

@@ -8,7 +8,7 @@ That's a problem, because the entire pitch of these models is a *confidence* you
 
 **Verdict** is a decision layer with a fourth output: ABSTAIN. It attaches to any causal LM you already serve. No new weights, no training, nothing to download.
 
-    pip install verdict-ai
+    pip install verdict-llm
 
 Give it a state and typed questions, it answers all of them in one forward pass. If the calibrated confidence falls below a threshold you fit on your own data, it abstains and escalates instead of guessing.
 
