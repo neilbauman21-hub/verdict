@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verdict-ai"
+version = "0.1.0"
+description = "Typed decisions with abstention, over any causal LM. One forward pass, no generation, no new weights."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+keywords = ["jev", "system-one", "rlcd", "decision", "calibration", "routing", "abstention", "guardrails", "mlx"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+mlx = ["mlx-lm>=0.20"]
+transformers = ["transformers>=4.45", "torch>=2.4"]
+
+[project.urls]
+Homepage = "https://github.com/neilthepineapplegoat/verdict"
+
+[tool.setuptools.packages.find]
+include = ["verdict*"]
